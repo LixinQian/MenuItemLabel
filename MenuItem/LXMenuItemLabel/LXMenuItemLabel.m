@@ -23,7 +23,7 @@
 }
 
 - (BOOL)canPerformAction:(SEL)action withSender:(id)sender {
-    // Only return YES for the copy: action AND the copyingEnabled property is YES.
+    // Only return YES for the copy: action AND the shouldLongPress property is YES.
     BOOL matching = NO;
     for (UIMenuItem *item in self.menuList) {
         if (item.action == action && self.shouldLongPress) {
