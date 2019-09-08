@@ -30,7 +30,7 @@ static const void *longPressGestureRecognizerKey = &longPressGestureRecognizerKe
     // Only return YES for the copy: action AND the copyingEnabled property is YES.
     BOOL matching = NO;
     for (UIMenuItem *item in self.menuList) {
-        if (item.action == action) {
+        if (item.action == action && self.shouldLongPress) {
             matching = YES;
             break;
         }
