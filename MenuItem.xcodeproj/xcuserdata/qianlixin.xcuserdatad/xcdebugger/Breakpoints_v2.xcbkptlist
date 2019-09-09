@@ -13,53 +13,5 @@
             stopOnStyle = "0">
          </BreakpointContent>
       </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "MenuItem/LXMenuItemLabel/UILabel+LXMenuItem.m"
-            timestampString = "589719139.359962"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "133"
-            endingLineNumber = "133"
-            landmarkName = "-forwardingTargetForSelector:"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "-[UILabel(LXMenuItem) forwardingTargetForSelector:]"
-                  moduleName = "MenuItem"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/qianlixin/Desktop/MenuItemLabel/MenuItem/LXMenuItemLabel/UILabel+LXMenuItem.m"
-                  timestampString = "589719139.3871731"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "133"
-                  endingLineNumber = "133"
-                  offsetFromSymbolStart = "63">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "-[UILabel(LXMenuItem) forwardingTargetForSelector:]"
-                  moduleName = "MenuItem"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/qianlixin/Desktop/MenuItemLabel/MenuItem/LXMenuItemLabel/UILabel+LXMenuItem.m"
-                  timestampString = "589719139.391019"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "133"
-                  endingLineNumber = "133"
-                  offsetFromSymbolStart = "83">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
    </Breakpoints>
 </Bucket>

@@ -75,8 +75,10 @@
 }
 
 - (void)qyc_textcopy:(id)sender {
-    UIPasteboard *pasteboard = [UIPasteboard generalPasteboard];
-    [pasteboard setString:self.text];
+    if (self.text) {
+        UIPasteboard *pasteboard = [UIPasteboard generalPasteboard];
+        [pasteboard setString:self.text];
+    }
 }
 
 - (id)forwardingTargetForSelector:(SEL)sel {
