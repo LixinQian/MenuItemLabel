@@ -4,7 +4,6 @@ UILabel自定义长按弹出系统菜单
 默认自带复制菜单，可以自定义其他菜单。
 提供分类和子类两种不同实现。
 
-效果图
 ![效果图](https://github.com/LixinQian/MenuItemLabel/blob/master/效果图.gif "效果图")
 # 使用简介
 1.shouldLongPress属性设置为YES，默认实现复制菜单
