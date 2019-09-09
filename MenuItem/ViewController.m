@@ -22,14 +22,14 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    UIMenuItem *item1 = [[UIMenuItem alloc] initWithTitle:@"XX" action:@selector(qyc_labeMenuXX:)];
+    UIMenuItem *item1 = [[UIMenuItem alloc] initWithTitle:@"Item1" action:@selector(qyc_labeMenuXX:)];
     [self.redLabel.menuList addObject:item1];
     self.redLabel.forwardObject = self;
     self.redLabel.shouldLongPress = YES;
 
-//    UIMenuItem *item2 = [[UIMenuItem alloc] initWithTitle:@"XX" action:@selector(qyc_labeMenuXX:)];
-//    [self.blueLabel.menuList addObject:item2];
-//    self.blueLabel.forwardObject = self;
+    UIMenuItem *item2 = [[UIMenuItem alloc] initWithTitle:@"Item2" action:@selector(qyc_labeMenuXX:)];
+    [self.blueLabel.menuList addObject:item2];
+    self.blueLabel.forwardObject = self;
     self.blueLabel.shouldLongPress = YES;
     
 }

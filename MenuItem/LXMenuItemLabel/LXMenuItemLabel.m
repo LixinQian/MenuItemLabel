@@ -40,6 +40,7 @@
     if (gestureRecognizer == self.longPressGestureRecognizer) {
         if (gestureRecognizer.state == UIGestureRecognizerStateBegan) {
             [self becomeFirstResponder];
+            [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(menuItemsHiden) name:UIMenuControllerWillHideMenuNotification object:nil];
             
             UIMenuController *copyMenu = [UIMenuController sharedMenuController];
             copyMenu.menuItems = self.menuList.copy;
@@ -51,6 +52,12 @@
 }
 
 #pragma mark - Private Methods
+
+- (void)menuItemsHiden {
+    UIMenuController *copyMenu = [UIMenuController sharedMenuController];
+    copyMenu.menuItems = nil;
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+}
 
 - (void) setupGestureRecognizers {
     // Remove gesture recognizer

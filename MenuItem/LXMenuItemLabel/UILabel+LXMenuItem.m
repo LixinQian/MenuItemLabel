@@ -44,6 +44,7 @@ static const void *longPressGestureRecognizerKey = &longPressGestureRecognizerKe
     if (gestureRecognizer == self.longPressGestureRecognizer) {
         if (gestureRecognizer.state == UIGestureRecognizerStateBegan) {
             [self becomeFirstResponder];
+            [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(menuItemsHiden) name:UIMenuControllerWillHideMenuNotification object:nil];
             
             UIMenuController *copyMenu = [UIMenuController sharedMenuController];
             copyMenu.menuItems = self.menuList.copy;
@@ -55,6 +56,12 @@ static const void *longPressGestureRecognizerKey = &longPressGestureRecognizerKe
 }
 
 #pragma mark - Private Methods
+
+- (void)menuItemsHiden {
+    UIMenuController *copyMenu = [UIMenuController sharedMenuController];
+    copyMenu.menuItems = nil;
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+}
 
 - (BOOL)shouldLongPress {
     return [objc_getAssociatedObject(self, shouldLongPressKey) boolValue];
@@ -115,8 +122,10 @@ static const void *longPressGestureRecognizerKey = &longPressGestureRecognizerKe
 }
 
 - (void)qyc_textcopy:(id)sender {
-    UIPasteboard *pasteboard = [UIPasteboard generalPasteboard];
-    [pasteboard setString:self.text];
+    if (self.text) {
+        UIPasteboard *pasteboard = [UIPasteboard generalPasteboard];
+        [pasteboard setString:self.text];
+    }
 }
 
 - (id)forwardingTargetForSelector:(SEL)sel {
